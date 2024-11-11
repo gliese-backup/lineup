@@ -10,7 +10,7 @@
     <!-- 
     MARK: Header    
     -->
-    <div class="navbar bg-base-100">
+    <div class="navbar">
       <div class="flex-1">
         <a class="btn btn-ghost text-xl" href="#">Lineup</a>
       </div>
@@ -36,6 +36,58 @@
         </button>
       </div>
     </div>
+
+    <!-- 
+      MARK: Main  
+    -->
+    <main class="flex items-center justify-center min-h-screen my-5 glass">
+      <div class="card bg-zinc-100 w-80 sm:w-96 shadow-2xl">
+        <figure>
+          <img
+            src="/pattern.jpg"
+            class="h-full w-full object-cover"
+            alt="Pattern"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title text-2xl">
+            Lineup &mdash; Organize your tasks
+          </h2>
+
+          <input
+            type="text"
+            placeholder="Add a task"
+            class="input input-bordered w-full max-w-xs my-2"
+          />
+
+          <div class="form-control grid gap-1">
+            <!-- Completed -->
+            <label class="label cursor-pointer bg-zinc-300 rounded">
+              <span class="label-text">Completed Task</span>
+              <input
+                type="checkbox"
+                checked
+                class="checkbox checkbox-primary"
+              />
+            </label>
+            <!-- Uncompleted -->
+            <label class="label cursor-pointer">
+              <span class="label-text">Uncompleted Task</span>
+              <input type="checkbox" class="checkbox checkbox-primary" />
+            </label>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 
+      MARK: Footer
+    -->
+    <footer class="footer footer-center text-base-content p-4">
+      <aside>
+        <p>Copyrights free &mdash; <span class="year">2024</span></p>
+      </aside>
+    </footer>
 
     <!-- Custom Scripts -->
     <script type="module" src="src/main.js"></script>
