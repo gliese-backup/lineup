@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="emerald">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lineup &mdash; Organize your life</title>
   </head>
-  <body data-theme="cmyk">
+  <body>
     <!-- 
     MARK: Header    
     -->
@@ -54,12 +54,21 @@
             Lineup &mdash; Organize your tasks
           </h2>
 
-          <input
-            type="text"
-            placeholder="Add a task"
-            class="input input-bordered w-full max-w-xs my-2"
-          />
+          <!-- 
+            MARK: Add new task
+          -->
+          <form>
+            <input
+              type="text"
+              placeholder="Add a task"
+              class="input input-bordered w-full max-w-xs my-2"
+              name="task"
+            />
+          </form>
 
+          <!-- 
+            MARK: Tasks Go Here 
+          -->
           <div class="form-control grid gap-1">
             <!-- Completed -->
             <label class="label cursor-pointer bg-zinc-300 rounded">
