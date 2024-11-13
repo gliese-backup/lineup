@@ -1,13 +1,23 @@
 import "./index.css";
+import { formEl, inputEl, yearEl } from "./domSelection";
 
-// MARK: DOM Selection
-const formEl = document.querySelector("form");
-const inputEl = document.querySelector("input");
-const yearEl = document.querySelector(".year");
+const tasks = [];
 
 formEl.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevent the page from reloading
-  console.log(inputEl.value);
+
+  //  Checking for empty input
+  if (!inputEl.value) {
+    return;
+  }
+
+  tasks.push({
+    title: inputEl.value,
+    isCompleted: false,
+    id: crypto.randomUUID(),
+  });
+
+  console.log(tasks);
 
   //  Empty the input field
   inputEl.value = "";
