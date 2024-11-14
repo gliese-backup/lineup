@@ -59,7 +59,7 @@
           </h2>
 
           <!-- 
-            MARK: Add new task
+            MARK: New Task
           -->
           <form>
             <input
@@ -72,24 +72,9 @@
           </form>
 
           <!-- 
-            MARK: Tasks Go Here 
+            MARK: Tasks List
           -->
-          <div class="form-control grid gap-1">
-            <!-- Completed -->
-            <label class="label cursor-pointer bg-zinc-300 rounded">
-              <span class="label-text">Completed Task</span>
-              <input
-                type="checkbox"
-                checked
-                class="checkbox checkbox-primary"
-              />
-            </label>
-            <!-- Uncompleted -->
-            <label class="label cursor-pointer">
-              <span class="label-text">Uncompleted Task</span>
-              <input type="checkbox" class="checkbox checkbox-primary" />
-            </label>
-          </div>
+          <div class="form-control grid gap-1" data-task-list></div>
         </div>
       </div>
     </main>
@@ -100,7 +85,7 @@
     <footer class="footer footer-center text-base-content py-4">
       <aside>
         <p>
-          Copyrights free &mdash; <span class="year">1000</span>. Covered in our
+          Copyrights free &mdash; <span class="year"></span>. Covered in our
           <a
             href="https://cdn.jsdelivr.net/gh/gliese-backup/Lineup/LICENSE"
             target="_blank"
