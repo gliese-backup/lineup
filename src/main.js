@@ -13,6 +13,7 @@ function renderTasks() {
     fragment.appendChild(taskEl);
   });
 
+  // Render on real DOM
   taskListEl.appendChild(fragment);
 }
 
@@ -27,7 +28,7 @@ formEl.addEventListener("submit", (e) => {
   tasks.unshift({
     id: crypto.randomUUID(),
     value: inputEl.value,
-    isCompleted: false,
+    isCompleted: true,
   });
 
   console.log(tasks);

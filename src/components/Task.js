@@ -1,7 +1,6 @@
 export default function Task(content, checked) {
   const label = document.createElement("label");
-  label.className =
-    "label cursor-pointer" + (checked && " bg-zinc-300 rounded");
+  label.className = "label cursor-pointer" + (checked && " bg-red-300 rounded");
 
   const span = document.createElement("span");
   span.className = "label-text";
