@@ -1,8 +1,17 @@
+import localforage from "localforage";
 import "./index.css";
 import { formEl, inputEl, taskListEl, yearEl } from "./domSelection";
 import Task from "./components/Task";
 
 let tasks = [];
+
+// localforage.setDriver(localforage.LOCALSTORAGE);
+
+// IIFE
+(async () => {
+  const data = await localforage.getItem("device");
+  console.log(data);
+})();
 
 // This toggles the isCompleted property of the task
 // Will be called when the user clicks on the checkbox
