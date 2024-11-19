@@ -13,6 +13,9 @@ function toggleTask(id) {
     }
     return task;
   });
+
+  // Show uncompleted tasks first
+  tasks.sort((a, b) => a.isCompleted - b.isCompleted);
 }
 
 function renderTasks() {
