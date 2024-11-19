@@ -2,7 +2,18 @@ import "./index.css";
 import { formEl, inputEl, taskListEl, yearEl } from "./domSelection";
 import Task from "./components/Task";
 
-const tasks = [];
+let tasks = [];
+
+// This toggles the isCompleted property of the task
+// Will be called when the user clicks on the checkbox
+function toggleTask(id) {
+  tasks = tasks.map((task) => {
+    if (task.id === id) {
+      return { ...task, isCompleted: !task.isCompleted };
+    }
+    return task;
+  });
+}
 
 function renderTasks() {
   taskListEl.innerHTML = "";
@@ -42,7 +53,8 @@ formEl.addEventListener("submit", (e) => {
 taskListEl.addEventListener("click", (e) => {
   if (e.target.tagName === "INPUT") {
     console.log(e.target.closest("label").id);
-    console.log("Hey");
+    toggleTask(e.target.closest("label").id);
+    renderTasks();
   }
 });
 

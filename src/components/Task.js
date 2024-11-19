@@ -1,7 +1,8 @@
 export default function Task(content, checked, id) {
   const label = document.createElement("label");
   label.id = id;
-  label.className = "label cursor-pointer" + (checked && " bg-red-300 rounded");
+  label.className =
+    "label cursor-pointer " + (checked && " bg-red-100 rounded");
 
   const span = document.createElement("span");
   span.className = `label-text ${checked && "underline"}`;
