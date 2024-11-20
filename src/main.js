@@ -64,6 +64,7 @@ formEl.addEventListener("submit", (e) => {
   inputEl.value = "";
 });
 
+// Event Delegation
 taskListEl.addEventListener("click", (e) => {
   if (e.target.tagName === "INPUT") {
     console.log(e.target.closest("label").id);
@@ -72,7 +73,7 @@ taskListEl.addEventListener("click", (e) => {
   }
 });
 
-// IIFE
+// IIFE: Render current year
 (function () {
   const year = new Date().getFullYear();
 

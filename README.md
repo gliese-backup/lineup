@@ -1,31 +1,37 @@
 # Lineup
 
-## Tailwind Setup
+A simple to-do list app built with Tailwind CSS and localForage.
 
-1. Scaffold a new vite vanilla project `pnpm init vite@latest .` command
-2. Install tailwindcss
-   `pnpm add -D tailwindcss postcss autoprefixer`
+![Mockup](mockup.png)
 
-3. create setting files
-   using: `pnpx tailwindcss init -p`
+## Features
 
-4. In your css file add the tailwind directives:
-   `@tailwind base;` `@tailwind components;` `@tailwind utilities;`
+- Local storage using localForage
+- Dark mode
+- Responsive design
+- Keyboard navigation
+- Task sorting
+- Task completion
+- Task deletion
 
----
+## Getting Started
 
-# DaisyUI Setup
+To get started, follow these steps:
 
-1. Install daisyui
-   `pnpm add -D daisyui`
-2. Add this in your tailwind.config.js file
+1. Clone the repository:
 
-```js
-module.exports = {
-  content: ["./index.html", "./src/**/*.{js}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [require("daisyui")],
-};
+```bash
+git clone https://github.com/gliese-backup/lineup.git
+```
+
+2. Install the dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
+
+```bash
+npm run dev
 ```
